@@ -1,0 +1,55 @@
+Informe de Librerías Utilizadas y Aprendizajes del Proyecto
+
+Este informe resume las herramientas empleadas y los conocimientos
+adquiridos durante el desarrollo del ejercicio práctico de análisis
+de recompra en campañas de marketing.
+
+Librerías utilizadas:
+
+1. pandas
+   Se utilizó para cargar, explorar y transformar el dataset.
+   Permite leer archivos Excel, analizar estadísticas descriptivas
+   y codificar variables categóricas.
+
+2. matplotlib
+   Se empleó para generar gráficos básicos como boxplots y barras.
+   Ayuda a visualizar relaciones entre variables como edad,
+   ingreso y recompra.
+
+3. seaborn
+   Complementa matplotlib con visualizaciones más detalladas
+   y estéticas. Se usó para representar distribuciones y
+   comparaciones entre grupos.
+
+4. scikit-learn
+   Se utilizó para construir el modelo predictivo de clasificación.
+   Incluye herramientas para dividir el dataset, entrenar el árbol
+   de decisión y evaluar su rendimiento.
+
+Aprendizajes del proyecto:
+
+- Comprendimos cómo plantear un problema de negocio y traducirlo
+  en preguntas de análisis.
+
+- Aprendimos a importar y explorar datos reales, detectando
+  valores faltantes y patrones relevantes.
+
+- Aplicamos técnicas de preprocesamiento para preparar los datos
+  para el modelado.
+
+- Visualizamos relaciones clave entre variables para entender el
+  comportamiento de los clientes.
+
+- Construimos un modelo de árbol de decisión para predecir la
+  recompra, evaluando su precisión y utilidad.
+
+- Interpretamos los resultados del modelo para tomar decisiones
+  estratégicas basadas en datos.
+
+- Aprendimos a comunicar hallazgos mediante visualizaciones y
+  conclusiones claras.
+
+Este ejercicio integró todos los pasos del proceso de minería de
+datos, desde la exploración inicial hasta la toma de decisiones,
+utilizando herramientas profesionales y simulando un caso real
+de marketing.
