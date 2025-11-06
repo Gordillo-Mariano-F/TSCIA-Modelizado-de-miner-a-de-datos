@@ -1,0 +1,93 @@
+INFORME DE USO – PROYECTO N°4
+
+1. ¿Qué es Proyecto N°4?
+
+Proyecto N°4 es una aplicación desarrollada en Streamlit que permite
+gestionar, visualizar, editar y exportar datos relacionados con un sistema
+de comercio. Está diseñada para trabajar con bases de datos MariaDB y
+archivos CSV/JSON, ofreciendo una interfaz amigable y flexible para
+usuarios técnicos y no técnicos.
+
+2. Objetivos principales
+
+- Conectar con una base de datos MariaDB y extraer tablas.
+- Cargar datos desde archivos CSV o JSON.
+- Visualizar y editar registros de forma manual.
+- Crear nuevas tablas desde cero.
+- Exportar los datos modificados en formatos CSV y JSON.
+
+3. Estructura de la aplicación
+
+A. Barra lateral (Sidebar)
+
+Contiene todas las acciones relacionadas con la carga y exportación de datos.
+
+- Conexión a base de datos:
+  Permite ingresar host, usuario, contraseña, base y puerto para conectarse
+  a MariaDB. Al conectarse, se extraen todas las tablas y se guardan como
+  archivos CSV.
+
+- Carga desde JSON:
+  Recupera datos previamente guardados en formato JSON.
+
+- Carga desde carpeta CSV:
+  Permite importar múltiples archivos CSV desde una carpeta local.
+
+- Carga de archivo CSV individual:
+  Permite subir un archivo CSV y asignarle un nombre de tabla personalizado.
+
+- Exportación:
+  Se pueden exportar los datos modificados como archivos CSV individuales o
+  como un único archivo JSON completo.
+
+B. Área principal (Tabs)
+
+Tab 1: Visualización y edición de tablas
+
+- Permite seleccionar una tabla cargada.
+- Muestra los datos en una vista previa.
+- Permite editar los registros manualmente.
+- Los cambios se guardan solo cuando el usuario presiona el botón
+  "Guardar cambios".
+
+Tab 2: Crear nuevas tablas
+
+- El usuario define el nombre de la nueva tabla.
+- Agrega columnas una por una, eligiendo nombre y tipo de dato.
+- Se genera una tabla vacía que puede ser editada directamente.
+- Los datos ingresados pueden ser guardados manualmente.
+
+4. Funcionamiento técnico
+
+- Los datos se almacenan temporalmente en la memoria de sesión de Streamlit.
+- Las tablas se guardan en la carpeta "csv_salida" como archivos CSV
+  modificados.
+- El archivo "datos_comercio_modificado.json" contiene todas las tablas en
+  formato JSON.
+- La edición de registros se realiza sobre una copia del DataFrame, evitando
+  actualizaciones en tiempo real para mejorar el rendimiento.
+
+5. Requisitos técnicos
+
+- Python 3.8 o superior
+- Librerías necesarias:
+  - streamlit
+  - mariadb
+  - pandas
+
+6. Uso recomendado
+
+- Ideal para gestionar datos de comercio, inventario, ventas o cualquier
+  sistema tabular.
+- Puede ser utilizado por administradores, analistas o desarrolladores que
+  necesiten una interfaz rápida para manipular datos.
+- Compatible con bases de datos locales y archivos planos.
+
+7. Observaciones
+
+- La edición manual mejora el rendimiento en tablas grandes.
+- La creación de tablas es flexible y permite definir columnas dinámicamente.
+- La exportación es manual para garantizar control sobre los datos
+  modificados.
+
+FIN DEL INFORME
