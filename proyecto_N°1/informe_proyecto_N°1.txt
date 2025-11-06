@@ -1,0 +1,74 @@
+INFORME DEL PROYECTO 1 - GESTIÓN DE BASE DE DATOS COMERCIO EN PYTHON
+
+DESCRIPCIÓN GENERAL
+-------------------
+Este proyecto permite gestionar los datos de una base de datos llamada
+"comercio" utilizando Python. El sistema se conecta a MariaDB, exporta
+cada tabla como archivo CSV, las carga como listas de diccionarios,
+permite modificar los datos desde consola (agregar, editar, eliminar)
+y guarda los cambios en nuevos archivos CSV y en un archivo JSON.
+
+FUNCIONAMIENTO DEL CÓDIGO
+--------------------------
+1. Conexión a la base de datos:
+   Se utiliza la biblioteca `mariadb` para conectarse al servidor local
+   de MariaDB. Se obtiene la lista de tablas disponibles en la base de
+   datos "comercio".
+
+2. Exportación de tablas:
+   Cada tabla se consulta con `SELECT *`. Los datos se guardan en
+   archivos CSV dentro de la carpeta `csv_salida`.
+
+3. Carga de datos:
+   Si existe un archivo JSON con datos modificados, se ofrece al
+   usuario la opción de cargarlo. Si no se carga el JSON, se cargan los
+   datos directamente desde la base de datos.
+
+4. Interfaz interactiva por consola:
+   Se muestra un menú con las tablas disponibles. El usuario puede
+   elegir una tabla y realizar acciones:
+   - Ver registros (formateados como tabla visual)
+   - Agregar un nuevo registro
+   - Modificar un registro existente
+   - Eliminar un registro
+
+5. Guardado de cambios:
+   Al salir del programa, se guardan los datos modificados en nuevos
+   archivos CSV. También se genera un archivo JSON con todas las tablas
+   y sus registros actualizados.
+
+BIBLIOTECAS UTILIZADAS
+----------------------
+- mariadb:
+  Permite conectarse a bases de datos MariaDB desde Python. Se usa para
+  ejecutar consultas SQL y obtener los datos de las tablas.
+
+- csv:
+  Biblioteca estándar de Python para leer y escribir archivos CSV. Se
+  usa para exportar los datos y guardar los cambios.
+
+- json:
+  Biblioteca estándar para trabajar con archivos JSON. Se usa para
+  guardar todas las tablas en un único archivo estructurado.
+
+- os:
+  Biblioteca estándar para interactuar con el sistema operativo. Se usa
+  para crear carpetas y verificar si existen archivos.
+
+- tabulate:
+  Biblioteca externa que permite mostrar listas de diccionarios como
+  tablas visuales en consola. Mejora la estética de los registros
+  mostrados.
+
+REQUISITOS
+----------
+Para ejecutar el proyecto correctamente se deben instalar las
+siguientes dependencias:
+
+pip install mariadb tabulate
+
+CONCLUSIÓN
+----------
+Este proyecto permite gestionar una base de datos de forma sencilla y
+visual desde la consola de Python. Es útil para tareas de mantenimiento,
+edición y exportación de datos sin necesidad de interfaces gráficas.
